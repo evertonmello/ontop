@@ -1,0 +1,19 @@
+<div class="header-container">
+    <img src="assets/images/pink 1.png" class="logo" alt="">
+    <div class="menu-container">
+        <div *ngFor="let item of menuItems; let i = index" (click)="menuItemSelected = i" class="menu-item"
+            [ngClass]="{'selected': menuItemSelected == i}">
+            <div class="item-container">
+                <mat-icon svgIcon="{{item.icon}}" class="disabled" [ngClass]="{'actived': menuItemSelected == i}"></mat-icon>
+                <span>{{item.label}}</span>
+                <mat-icon svgIcon="arrowdown" class="arrow disabled" [ngClass]="{'actived': menuItemSelected == i}"></mat-icon>
+            </div>
+        </div>
+    </div>
+    <div class="image-container" >
+        <span></span>
+        <img src="assets/images/Ellipse 49.svg" class="profile-image" alt="">
+        <mat-icon svgIcon="arrowdown"></mat-icon>
+    </div>
+    <mat-icon class="menu">menu</mat-icon>
+</div>

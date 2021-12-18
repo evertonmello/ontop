@@ -1,0 +1,55 @@
+<h1 class="client-label">Contracts for Client</h1>
+<div class="search-bar">
+    <div class="search-ipt">
+        <mat-icon svgIcon="search" class="serach-icon"></mat-icon>
+        <input type="text" placeholder="Search">
+    </div>
+    <button class="filter-btn"><mat-icon svgIcon="filter"></mat-icon> Filter</button>
+    <button class="new-hire-btn"><mat-icon svgIcon="plus"></mat-icon>New Hire</button>
+</div>
+<div class="filter-container">
+    <input type="date" class="w20">
+    <select class="w20">
+        <option>Contract Type</option>
+    </select>
+    <input type="text" class="w35" placeholder="Contractor Name">
+    <select class="w20">
+        <option>Status</option>
+    </select>
+</div>
+<div class="table-container">
+    <div class="table-header">
+        <span>Contractor name</span>
+        <span>Type</span>
+        <span>Start date</span>
+        <span>Amount</span>
+        <span>Status</span>
+        <span>Actions</span>
+    </div>
+    <div class="table" *ngFor="let contract of contracts; let i = index">
+        <div class="line">
+            <span>Contractor name </span>
+            <img src="./../assets/images/profile{{i}}.svg" alt="">
+            {{contract.name}}
+        </div>
+        <div class="line"> <span>Type </span> {{contract.type}}</div>
+        <div class="line"> <span>Start Date </span> {{contract.startDate}}</div>
+        <div class="line"> <span>Amount </span> {{contract.amount | currency:'USD':true}}</div>
+        <div class="line"> <span>Status </span>
+            <div class="ticker active" [ngClass]="{'pending': !contract.status}">
+                {{contract.status? 'Active' : 'Signature pending'}}
+            </div>
+        </div>
+        <div class="line"> <span>actions </span>
+            <mat-icon class="dropdownAct" svgIcon="actions"></mat-icon>
+            <mat-form-field>
+                <mat-select>
+                    <mat-option><mat-icon  svgIcon="edit" class="dropdown-icons"></mat-icon> Edit</mat-option>
+                    <mat-option><mat-icon  svgIcon="sign" class="dropdown-icons"></mat-icon>Sign</mat-option>
+                    <mat-option><mat-icon  svgIcon="docs" class="dropdown-icons"></mat-icon>View Summary</mat-option>
+                    <mat-option><mat-icon  svgIcon="trash" class="dropdown-icons"></mat-icon>Delete</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+</div>

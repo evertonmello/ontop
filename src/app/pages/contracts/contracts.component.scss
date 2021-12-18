@@ -1,0 +1,230 @@
+.table-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+.client-label {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.filter-btn {
+    width: 110px;
+    background: #ebebeb;
+    border-radius: 5px;
+    height: 58px;
+}
+
+.new-hire-btn {
+    width: 192px;
+    background: #ff5a70;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    color: #fff;
+    height: 58px;
+}
+
+.search-ipt {
+    height: 100%;
+    position: relative;
+    input {
+        width: 100%;
+        padding-left: 56px;
+        height: 100%;
+    }
+    .serach-icon {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+    }
+}
+
+.ticker {
+    padding: 4px 11px;
+    border-radius: 12px;
+}
+.active {
+    background-color: #36cf822e;
+    color: #36cf82;
+}
+
+.pending {
+    background-color: #ffdebb;
+    color: #f29d42;
+}
+
+.line {
+    position: relative;
+
+    mat-form-field {
+        position: absolute;
+    }
+
+}
+.dropdown-icons {
+    width: 13px;
+    height: 13px;
+}
+
+.search-bar{
+    button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    mat-icon{
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+    }
+}
+@media only screen and (min-width: 800px) {
+    .client-label {
+        font-size: 33px;
+    }
+
+    .search-bar {
+        display: flex;
+        justify-content: space-between;
+        height: 58px;
+        margin-bottom: 28px;
+    }
+
+    .search-ipt {
+        width: 70%;
+    }
+
+    .filter-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    .table-container {
+        background-color: #fff;
+        padding: 12px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        display: block;
+
+        .table-header {
+            display: flex;
+            height: 90px;
+            align-items: center;
+            span{
+                width: 16.6%;
+                padding-left: 20px;
+            }
+            
+        }
+        .table {
+            display: flex;
+            height: 90px;
+            background-color: #f9f9f9;
+            margin-bottom: 24px;
+            align-items: center;
+            font-size: 14px;
+            .line {
+                display: flex;
+                align-items: center;
+                width: 16.6%;
+                padding-left: 20px;
+                .ticker {
+                    width: 160px;
+                }
+                img {
+                    display: block;
+                    margin-right: 16px;
+                }
+            }
+
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .client-label {
+        font-size: 24px;
+    }
+    .search-bar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 58px;
+        margin-bottom: 28px;
+    }
+
+    .table-header {
+        display: none;
+    }
+
+    .search-ipt {
+        width: 100%;
+    }
+
+    .filter-btn {
+        margin-top: 16px;
+        width: 30%;
+    }
+
+    .new-hire-btn {
+        margin-top: 16px;
+        width: 65%;
+    }
+
+    .filter-container {
+        margin-top: 92px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        input,
+        select {
+            width: 80%;
+            max-width: 300px;
+            margin-bottom: 16px;
+        }
+    }
+
+    mat-form-field{
+        right: 88px;
+    }
+
+    .table-container {
+        width: fit-content;
+
+        .table {
+            background-color: #fff;
+            margin: 12px 0;
+            width: fit-content;
+            padding: 16px;
+            font-size: 12px;
+
+            span {
+                display: block;
+                font-family: "Aileron Bold";
+            }
+            .line {
+                height: 37px;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                padding: 0 18px;
+
+                img {
+                    display: none;
+                }
+                span {
+                    min-width: 120px;
+                    display: inline-block;
+                }
+            }
+            .line:nth-child(odd) {
+                background-color: #f9f9f9;
+            }
+        }
+    }
+}

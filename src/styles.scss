@@ -1,0 +1,90 @@
+html,
+body {
+    margin: 0;
+    background: #f9f9f9;
+}
+@import "material-icons/iconfont/material-icons.css";
+
+@font-face {
+    font-family: "Aileron Bold";
+    src: url(assets/fonts/Aileron-Bold.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "Aileron";
+    src: url(assets/fonts/Aileron-Regular.otf) format("opentype");
+}
+
+input::-webkit-input-placeholder {
+    color: #ebebeb;
+}
+input:-moz-placeholder {
+    color: #ebebeb;
+}
+
+* {
+    font-family: "Aileron";
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+input,
+select {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    outline: none;
+    padding: 0 12px;
+}
+
+mat-form-field{
+    opacity: 0;
+    width: 30px;
+}
+.mat-option-text{
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.w20 {
+    width: 20%;
+}
+.w25 {
+    width: 25%;
+}
+.w35 {
+    width: 35%;
+}
+.w40 {
+    width: 40%;
+}
+
+.main-container {
+    max-width: 1080px;
+    margin: 160px auto 0 auto;
+}
+
+.disabled {
+    path {
+        fill: #898989;
+    }
+}
+.actived {
+    path {
+        fill: #ff5a70;
+    }
+}
+.white {
+    path {
+        fill: #fff;
+    }
+}
+
+.black {
+    path {
+        fill: black;
+    }
+}
